@@ -18,20 +18,19 @@ const mongoose = require('mongoose');
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
 
-const userSchema = mongoose.Schema({
+const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
   },
   email:{
     type: String,
-    required: true,
     unique: true
+  },
+  phone:{
+    type: String,
   },
   password:{
     type: String,
-    required: true,
-    minlength: 8
   },
   isAdmin:{
     type: Boolean,
@@ -72,6 +71,17 @@ userSchema.methods.generateToken = async function(){
     console.error(error);
    }
 }
+
+// Compare password method
+userSchema.methods.comparePassword = async function(enteredPassword) {
+  try {
+    const user = this;
+    return await bcrypt.compare(enteredPassword, user.password);
+  } catch (error) {
+    throw error;
+  }
+};
+
 
 const user = mongoose.model("User", userSchema);
 module.exports = user;

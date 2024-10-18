@@ -29,14 +29,14 @@ const register = async(req, res)=>{
   try {
 
     console.log(req.body);
-    const {name, email, password} = req.body;
+    const {name, email, phone, password} = req.body;
     const userExist = await User.findOne({email});
 
     if(userExist){
       return res.status(400).json({msg: "email already exists"})
     }
      
-    const createdUser = await User.create({name, email, password})
+    const createdUser = await User.create({name, email, phone, password})
 
     res.status(200).json({
       message: "registration successful",
@@ -50,4 +50,39 @@ const register = async(req, res)=>{
 }
 
 
-module.exports = {home, register};
+// Login controller
+const login = async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+
+    // Check if user exists
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(400).json({ msg: "User does not exist" });
+    }
+
+    // Compare password using the model method
+    const isPasswordCorrect = await user.comparePassword(password);
+    if (!isPasswordCorrect) {
+      return res.status(400).json({ msg: "Invalid credentials" });
+    }
+
+    // Generate token
+    const token = await user.generateToken();
+
+    res.status(200).json({
+      message: "Login successful",
+      token: token,
+      userId: user._id.toString(),
+      // isAdmin: user.isAdmin
+    });
+
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+    // next(error);
+  }
+};
+
+
+
+module.exports = {home, register, login};
