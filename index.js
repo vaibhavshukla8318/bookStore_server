@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const authRouter = require("./router/router.auth")
 const formRouter = require("./router/router.contact");
+const serviceRouter = require("./router/router.service");
 const connectDB = require("./utils/db");
 const errorMiddleware = require("./middlewares/middleware.error");
 
@@ -23,6 +24,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRouter);
 app.use("/api/form", formRouter);
+app.use("/api/data", serviceRouter);
 
 // routes
 app.get('/', (req, res) => {
