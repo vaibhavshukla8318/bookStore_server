@@ -5,7 +5,6 @@ const services = async (req, res)=>{
     const response = await Service.find();
     if(!response){
       return res.status(400).json({msg: "No services found"});
-      return;
     }
 
     res.status(200).json({msg: response});

@@ -12,6 +12,9 @@ const serviceSchema = new Schema({
   quantity:{
     type: String,
     required: true
+  },
+  image:{
+    type: String,
   }
 })
 
