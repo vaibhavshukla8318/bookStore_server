@@ -1,3 +1,4 @@
+// Updated Books model
 const { model, Schema } = require('mongoose');
 
 const isValidImageUrl = (url) => {
@@ -16,13 +17,66 @@ const booksSchema = new Schema({
   },
   image: {
     type: String,
-    
-  validate: {
-    validator: isValidImageUrl,
-    message: "Invalid image URL. Please provide a valid URL that starts with http or https.",
+    required: true,
+    validate: [isValidImageUrl, 'Invalid image URL'],
   },
-    required: true
+  pdf: {
+    type: Array,
   },
+  likes: [{
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }],
+  dislikes: [{
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }],
+  ratings: [{
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    },
+    rating: {
+      type: Number,
+      required: true,
+      min: 1,
+      max: 5
+    }
+  }],
+  averageRating: {
+    type: Number,
+    default: 0
+  },
+  comments: [{
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true
+    },
+    content: {
+      type: String,
+      required: true
+    },
+    timestamp: {
+      type: Date,
+      default: Date.now
+    },
+    replies: [{
+      userId: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+      },
+      content: {
+        type: String,
+        required: true
+      },
+      timestamp: {
+        type: Date,
+        default: Date.now
+      }
+    }]
+  }]
 });
 
 const Books = model('Books', booksSchema);

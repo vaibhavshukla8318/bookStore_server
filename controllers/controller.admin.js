@@ -1,3 +1,5 @@
+// controller.admin.js
+
 const User = require('../models/model.user');
 const Contact = require('../models/model.contact')
 
@@ -8,7 +10,7 @@ const Contact = require('../models/model.contact')
 const getAllUsers = async (req, res) =>{
   try {
      const user = await User.find({}, {password: 0});
-     console.log(user);
+    //  console.log(user);
 
      if(!user || user.length === 0){
       return res.status(404).json({message: "No user found"});
@@ -30,7 +32,7 @@ const getUserById = async (req, res) => {
     if(!user){
       return res.status(404).json({message: "No user found with this ID"});
     }
-    console.log(user)
+    // console.log(user)
     res.status(200).json(user);
   } catch (error) {
     next(error);
