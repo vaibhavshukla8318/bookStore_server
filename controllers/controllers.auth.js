@@ -1,15 +1,3 @@
- /*
-Controllers
-
-    Definition: Controllers contain the logic that responds to incoming requests. They take input from the router, process it (often by interacting with models), and send back the appropriate response.
-
-    Functionality:
-    They serve as intermediaries between models and views (or client requests).
-    Controllers handle the business logic and coordinate actions.
-
-*/
-
-
 const User = require('../models/model.user')
 
 // home controllers

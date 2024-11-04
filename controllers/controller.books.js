@@ -3,8 +3,21 @@
 const fs = require('fs');
 const path = require('path');
 const Book = require('../models/models.books');
+const User = require('../models/model.user');
 
 const dataFilePath = path.join(__dirname, '../data.json');
+
+
+// Function to update data.json
+const updateDataFile = async () => {
+  try {
+    const books = await Book.find();
+    fs.writeFileSync(dataFilePath, JSON.stringify(books, null, 2), 'utf8');
+    console.log('data.json file has been updated');
+  } catch (error) {
+    console.error('Error updating data.json:', error.message);
+  }
+};
 
 
 // get All books
@@ -22,18 +35,17 @@ const getAllBooks = async (req, res) => {
 }
 
 
+
 // books using query(limit, page)
 const books = async (req, res) => {
   try {
-    const page = parseInt(req.query.page) || 1;  // Default to page 1
-    const limit = parseInt(req.query.limit) || 10; // Default to 10 items per page
+    const page = parseInt(req.query.page) || 1; 
+    const limit = parseInt(req.query.limit) || 10;
     const skip = (page - 1) * limit;
-
-    // Retrieve all documents and reverse the order
     
-    let response = await Book.find().sort({ _id: -1 }); // Fetch in descending order
+    let response = await Book.find().sort({ _id: -1 }); 
 
-    // Apply skip and limit for pagination on the reversed array
+    // Apply skip and limit for pagination
     response = response.slice(skip, skip + limit);
 
     // Count total documents 
@@ -79,7 +91,7 @@ const getBooksById = async (req, res) => {
 }
 
 
-// // update books using id
+ // update books using id
 const updateBookById = async (req, res) =>{
   try {
     const id = req.params.id;
@@ -90,22 +102,7 @@ const updateBookById = async (req, res) =>{
       return res.status(404).json({ message: "No book found with this ID" });
     } 
 
-    // Read and update book in data.json
-   const currentData = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
-
-   // Find the book index in data.json by _id
-   const bookIndex = currentData.findIndex(book => book._id === id);
-
-   if (bookIndex !== -1) {
-     // Update the book details in the JSON array
-     currentData[bookIndex] = { ...currentData[bookIndex], ...updateBook, _id: id };
-   } else {
-     // If not found, add the updated book to the data.json file
-     currentData.push({ ...updateBook, _id: id });
-   }
-
-   // Write the updated array back to data.json
-   fs.writeFileSync(dataFilePath, JSON.stringify(currentData, null, 2), 'utf8');
+   await updateDataFile();
 
    res.status(200).json({ message: "Book updated successfully", updatedBook });
 
@@ -131,15 +128,8 @@ const addBooks = async (req, res) => {
        title, author, image, pdf
       });
 
-    // Read the current data from the JSON file
-    const currentData = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
-    
-    // Add the new book to the JSON data
-      currentData.push({ title, author, image, pdf, _id: addBook._id });
    
-
-    // Write the updated data back to the JSON file
-    fs.writeFileSync(dataFilePath, JSON.stringify(currentData, null, 2), 'utf8');
+    await updateDataFile();
 
     res.status(200).json({ msg: "Your new book has been added successfully", addBook });
   } catch (error) {
@@ -160,14 +150,7 @@ const deleteBook = async (req, res) => {
       return res.status(404).json({ message: "No book found with this ID" });
     }
 
-    // Delete book from data.json
-    const currentData = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
-
-    // Find the index of the book to delete in the JSON data
-    const updatedData = currentData.filter(item => item.title !== book.title);
-
-    // Write the updated array back to data.json
-    fs.writeFileSync(dataFilePath, JSON.stringify(updatedData, null, 2), 'utf8');
+    await updateDataFile(); 
 
     res.status(200).json({ message: "Book deleted successfully" });
   } catch (error) {
@@ -192,7 +175,7 @@ const likeBook = async (req, res) => {
       return res.status(404).json({ message: 'Book not found' });
     }
 
-    // Check if the user already liked the book
+    // if the user already liked the book
     if (book.likes.includes(userId)) {
       return res.status(400).json({ message: 'You already liked this book' });
     }
@@ -201,12 +184,16 @@ const likeBook = async (req, res) => {
     book.dislikes = book.dislikes.filter(id => id.toString() !== userId.toString());
     book.likes.push(userId);
 
+    const updatedBook = await Book.findById(bookId).populate('likes', 'username email');
     await book.save();
-    res.status(200).json({ message: 'Book liked', likes: book.likes.length });
+    await updateDataFile();
+
+    res.status(200).json({ message: 'Book liked',likes: updatedBook.likes, likes: book.likes.length });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 // Dislike a book
 const dislikeBook = async (req, res) => {
@@ -220,7 +207,7 @@ const dislikeBook = async (req, res) => {
       return res.status(404).json({ message: 'Book not found' });
     }
 
-    // Check if the user already disliked the book
+    //  if the user already disliked the book
     if (book.dislikes.includes(userId)) {
       return res.status(400).json({ message: 'You already disliked this book' });
     }
@@ -230,6 +217,8 @@ const dislikeBook = async (req, res) => {
     book.dislikes.push(userId);
 
     await book.save();
+    await updateDataFile();
+
     res.status(200).json({ message: 'Book disliked', dislikes: book.dislikes.length });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -260,10 +249,8 @@ const rateBook = async (req, res) => {
     const existingRating = book.ratings.find(r => r.userId.toString() === userId.toString());
 
     if (existingRating) {
-      // Update existing rating
       existingRating.rating = rating;
     } else {
-      // Add new rating
       book.ratings.push({ userId, rating });
     }
 
@@ -273,7 +260,9 @@ const rateBook = async (req, res) => {
     book.averageRating = sumRatings / totalRatings;
 
     await book.save();
-    res.status(200).json({ message: 'Book rated successfully', averageRating: book.averageRating });
+    await updateDataFile();
+
+    res.status(200).json({ message: 'Book rated successfully', averageRating: book.averageRating, ratings: book.ratings });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -288,6 +277,7 @@ const addComment = async (req, res) => {
     const { bookId } = req.params;
     const { content } = req.body;
     const userId = req.user._id;
+    // const email = req.user.email;
 
     if (!content || content.trim() === '') {
       return res.status(400).json({ message: 'Comment content cannot be empty' });
@@ -303,6 +293,8 @@ const addComment = async (req, res) => {
     book.comments.push(comment);
 
     await book.save();
+    await updateDataFile();
+
     res.status(201).json({ message: 'Comment added', comments: book.comments });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -335,6 +327,8 @@ const addReply = async (req, res) => {
     comment.replies.push(reply);
 
     await book.save();
+    await updateDataFile();
+
     res.status(201).json({ message: 'Reply added', replies: comment.replies });
   } catch (error) {
     res.status(500).json({ error: error.message });
