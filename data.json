@@ -1,1 +1,124 @@
-[]
+[
+  {
+    "_id": "6728ef7ac95d28a233c55cc3",
+    "title": "Physics",
+    "author": "HC Verma",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
+      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing"
+    ],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c",
+      "6729a9ff5f20f00393115579"
+    ],
+    "dislikes": [],
+    "averageRating": 4,
+    "ratings": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "rating": 4,
+        "_id": "6728eff2c95d28a233c55d05"
+      }
+    ],
+    "comments": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "Hi there it's a great book you have",
+        "timestamp": "2024-11-04T16:00:59.101Z",
+        "replies": [
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "content": "Thaku sir",
+            "timestamp": "2024-11-04T16:01:09.920Z",
+            "_id": "6728efc5c95d28a233c55cd9"
+          }
+        ],
+        "_id": "6728efbbc95d28a233c55ccf"
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "Great",
+        "_id": "6729940e28b488d78a1dd4c0",
+        "timestamp": "2024-11-05T03:42:06.249Z",
+        "replies": []
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "kldnaksdf",
+        "_id": "6729c2575499112d1674fe46",
+        "timestamp": "2024-11-05T06:59:35.301Z",
+        "replies": []
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "sdasdkflaskdf aldkflsd",
+        "_id": "6729c26e961480854aaac7e3",
+        "timestamp": "2024-11-05T06:59:58.482Z",
+        "replies": [
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "content": "sdfkknsld",
+            "_id": "6729c279bd5ad79a57949f61",
+            "timestamp": "2024-11-05T07:00:09.154Z"
+          }
+        ]
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "ddf",
+        "_id": "6729c2c7e1d033d1a8c62757",
+        "timestamp": "2024-11-05T07:01:27.882Z",
+        "replies": []
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "hi there how are you",
+        "_id": "6729c2f454dbaa4ed406fd48",
+        "timestamp": "2024-11-05T07:02:12.073Z",
+        "replies": []
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "sdnaoisd",
+        "_id": "6729c38675a48267708653c1",
+        "timestamp": "2024-11-05T07:04:38.905Z",
+        "replies": []
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "sdnaoisd",
+        "_id": "6729c389bc63f9ae05513d18",
+        "timestamp": "2024-11-05T07:04:41.892Z",
+        "replies": []
+      },
+      {
+        "userId": "6729a9ff5f20f00393115579",
+        "content": "dsjfunasd",
+        "_id": "6729cecc81d3b0a6367970b6",
+        "timestamp": "2024-11-05T07:52:44.857Z",
+        "replies": [
+          {
+            "userId": "6729a9ff5f20f00393115579",
+            "content": "jddckjs sdjvnsdv sdvnsd",
+            "_id": "6729cf244bbb4485c48b9bf2",
+            "timestamp": "2024-11-05T07:54:12.283Z"
+          }
+        ]
+      }
+    ],
+    "__v": 15
+  }
+]
