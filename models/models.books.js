@@ -7,6 +7,7 @@ const isValidImageUrl = (url) => {
 };
 
 const booksSchema = new Schema({
+ 
   title: {
     type: String,
     required: true,
@@ -23,6 +24,7 @@ const booksSchema = new Schema({
   pdf: {
     type: Array,
   },
+  category: [String],
   likes: [{
     type: Schema.Types.ObjectId,
     ref: 'User'

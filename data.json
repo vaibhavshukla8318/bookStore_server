@@ -1,5 +1,6 @@
 [
   {
+    "category": [],
     "_id": "6728ef7ac95d28a233c55cc3",
     "title": "Physics",
     "author": "HC Verma",
@@ -44,6 +45,12 @@
             "content": "Thaku sir",
             "timestamp": "2024-11-04T16:01:09.920Z",
             "_id": "6728efc5c95d28a233c55cd9"
+          },
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "content": "Welcome ",
+            "_id": "6729e0224e8d345e44bd3a3e",
+            "timestamp": "2024-11-05T09:06:42.766Z"
           }
         ],
         "_id": "6728efbbc95d28a233c55ccf"
@@ -119,6 +126,445 @@
         ]
       }
     ],
-    "__v": 15
+    "__v": 16
+  },
+  {
+    "category": [],
+    "_id": "672a00baef567736e9c15d02",
+    "title": "JavaScripte",
+    "author": "David Flanagan",
+    "image": "https://example.com/images/javascript-guide.jpg",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "categories": [],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a00db196526cc8d7f6741",
+    "title": "react",
+    "author": "David Flanagan",
+    "image": "https://tse3.mm.bing.net/th?id=OIP.rO-GgQK-HFNNt3xMs7VkEwAAAA&pid=Api&P=0&h=180",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "React"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a1148d48b30e89032bdd0",
+    "title": "backend",
+    "author": "David Flanagan",
+    "image": "https://tse1.mm.bing.net/th?id=OIP.IFS6BChELXFCVmG_TynJWwHaEO&pid=Api&P=0&h=180",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "backend"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a11b947fb57acc60e2032",
+    "title": "frontend",
+    "author": "David Flanagan",
+    "image": "https://tse2.mm.bing.net/th?id=OIP.keu6UonKZhyvHS5smrNYSgHaEK&pid=Api&P=0&h=180",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "frontend"
+    ],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 1
+  },
+  {
+    "_id": "672a12647d532ced2bd56121",
+    "title": "recent",
+    "author": "Flanagan",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
+    "dislikes": [],
+    "averageRating": 4,
+    "ratings": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "rating": 4,
+        "_id": "672a22cecd6f28bf67f80d39"
+      }
+    ],
+    "comments": [],
+    "__v": 2
+  },
+  {
+    "_id": "672a13d0f974c380ba216647",
+    "title": "recent 2",
+    "author": "Flanagan",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
+    "dislikes": [],
+    "averageRating": 4,
+    "ratings": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "rating": 4,
+        "_id": "672a181198802be60b40b307"
+      }
+    ],
+    "comments": [],
+    "__v": 4
+  },
+  {
+    "_id": "672a1970329ca4d68ea51e95",
+    "title": "recent 3",
+    "author": "Flanagan",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a197689420db8c55afe11",
+    "title": "recent 4",
+    "author": "Flanagan",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a197dbaf0567e612199d5",
+    "title": "recent 5",
+    "author": "Flanagan",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
+    "dislikes": [],
+    "averageRating": 5,
+    "ratings": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "rating": 5,
+        "_id": "672a51a35f46f2c4a3550b7a"
+      }
+    ],
+    "comments": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "great book",
+        "_id": "672a239481cc4b9ffab7c3d8",
+        "timestamp": "2024-11-05T13:54:28.721Z",
+        "replies": [
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "content": "thanks",
+            "_id": "672a23ae370c86628880fbda",
+            "timestamp": "2024-11-05T13:54:54.025Z"
+          }
+        ]
+      }
+    ],
+    "__v": 4
+  },
+  {
+    "_id": "672a19843efb6b335eab3242",
+    "title": "recent 6",
+    "author": "Flanagan",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a198aa3183f5428f59974",
+    "title": "recent 7",
+    "author": "Flanagan",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://example.com/files/javascript-guide.pdf",
+      "https://example.com/files/javascript-guide.pdf",
+      "https://example.com/files/javascript-guide.pdf",
+      "https://example.com/files/javascript-guide.pdf"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a54ff66fe2f6dc6c0c7df",
+    "title": "hiiiii2",
+    "author": "dfnieofwoe",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "popular"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a5d561300e566450262b2",
+    "title": "difuvdif",
+    "author": "asdkjfsjfk",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "Physics"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a5dc17f9eea4ed19d39a2",
+    "title": "ziucvzisudv",
+    "author": "asdjf adf",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "Recent"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a5eb51a581c4f24335423",
+    "title": "lknlkdfa aewijf",
+    "author": "asdjfhsdf",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "crt"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a601587e1b83f579a2caa",
+    "title": "xkcvnsdfvsd",
+    "author": "adfvadsv",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a603c6ec855b7ccd02b2b",
+    "title": "iofbj sodf jp",
+    "author": "dfsdfbsdfb",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "jfhjdfh"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a6086279bae560a1cde6e",
+    "title": "ifoid o sadjf ",
+    "author": "dkfbsldkf df",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "Technology"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a618b4801f2cb5eef844d",
+    "title": "dlfkgnldfg",
+    "author": "dfgdf",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "highlyRated"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a69d4b1dd3a41b5b48725",
+    "title": "hi there hoe",
+    "author": "weorl eir",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "recent"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a6a010423c8b93d1f7c80",
+    "title": "retert",
+    "author": "ertwer",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "ergher"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672a6a502de01d56a3e09b01",
+    "title": "High",
+    "author": "rated",
+    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "pdf": [
+      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+    ],
+    "category": [
+      "highRated"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
   }
 ]

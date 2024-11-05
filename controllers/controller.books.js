@@ -35,6 +35,56 @@ const getAllBooks = async (req, res) => {
 }
 
 
+const getBooksByCategory = async (req, res) => {
+  try {
+    const category = req.params.category;
+    const books = await Book.find({ category: category });
+
+    if (!books.length) {
+      return res.status(404).json({ message: `No books found for category: ${category}` });
+    }
+
+    res.status(200).json(books);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching books by category", error: error.message });
+  }
+};
+
+
+
+const getBooksByCategoryPagination = async (req, res) => {
+  try {
+    const category = req.params.category;
+    const page = parseInt(req.query.page) || 1; 
+    const limit = parseInt(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    const books = await Book.find({ category: category }).skip(skip).limit(limit).sort({ _id: -1 });
+
+    if (!books.length) {
+      return res.status(404).json({ message: `No books found for category: ${category}` });
+    }
+
+    // Count total documents for pagination
+    const totalItems = await Book.countDocuments({ category: category });
+    const totalPages = Math.ceil(totalItems / limit);
+
+    res.status(200).json({
+      books,
+      totalItems,
+      totalPages,
+      currentPage: page,
+    });
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching books by category", error: error.message });
+  }
+};
+
+
+
+
+
+
 
 // books using query(limit, page)
 const books = async (req, res) => {
@@ -116,7 +166,7 @@ const updateBookById = async (req, res) =>{
 // add books
 const addBooks = async (req, res) => {
   try {
-    const { title, author, image, pdf } = req.body;
+    const { title, author, image, pdf, category } = req.body;
     const titleExist = await Book.findOne({ title });
 
     if (titleExist) {
@@ -125,7 +175,7 @@ const addBooks = async (req, res) => {
 
     // Add the new book to the database
     const addBook = await Book.create({
-       title, author, image, pdf
+       title, author, image, pdf, category
       });
 
    
@@ -354,4 +404,4 @@ const getComments = async (req, res) => {
 
 
 
-module.exports = {getAllBooks, books, addBooks, getBooksById, updateBookById, deleteBook, likeBook, dislikeBook, rateBook, addComment, getComments, addReply,};
+module.exports = {getAllBooks, books, addBooks, getBooksById, updateBookById, deleteBook, likeBook, dislikeBook, rateBook, addComment, getComments, addReply, getBooksByCategory, getBooksByCategoryPagination};

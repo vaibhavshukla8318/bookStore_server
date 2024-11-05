@@ -13,6 +13,9 @@ router.route('/books/:id').get(authMiddleware, booksControllers.getBooksById)
 router.route('/books/update/:id').patch(authMiddleware, booksControllers.updateBookById)
 router.route('/addedBooks').post(authMiddleware, booksControllers.addBooks)
 router.route('/books/delete/:id').delete(authMiddleware, booksControllers.deleteBook)
+router.get('/books/category/:category', booksControllers.getBooksByCategory);
+router.get('/books/categoryPagination/:category', booksControllers.getBooksByCategoryPagination);
+
 
 
 // Likes, Dislikes, Rate
