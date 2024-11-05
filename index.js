@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
 // error
 app.use(errorMiddleware)
 
-// Port 
+
 const PORT = 3000 || PORT;
 
 // server
