@@ -35,10 +35,30 @@ const getAllBooks = async (req, res) => {
 }
 
 
+
 const getBooksByCategory = async (req, res) => {
   try {
     const category = req.params.category;
-    const books = await Book.find({ category: category });
+    let filter = {};
+    let sort = {};
+
+    switch (category) {
+      case 'popular':
+        sort = { likes: -1 };
+        break;
+      case 'highRated':
+        sort = { averageRating: -1 };
+        break;
+      case 'recent':
+        sort = { _id: -1 };
+        break;
+      default:
+        filter = { category };
+        sort = { _id: -1 };
+        break;
+    }
+
+    const books = await Book.find(filter).sort(sort);
 
     if (!books.length) {
       return res.status(404).json({ message: `No books found for category: ${category}` });
@@ -50,24 +70,39 @@ const getBooksByCategory = async (req, res) => {
   }
 };
 
-
-
 const getBooksByCategoryPagination = async (req, res) => {
   try {
     const category = req.params.category;
-    const page = parseInt(req.query.page) || 1; 
+    const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     const skip = (page - 1) * limit;
 
-    const books = await Book.find({ category: category }).skip(skip).limit(limit).sort({ _id: -1 });
+    let filter = {};
+    let sort = {};
+
+    switch (category) {
+      case 'popular':
+        sort = { likes: -1 };
+        break;
+      case 'highRated':
+        sort = { averageRating: -1 };
+        break;
+      case 'recent':
+        sort = { _id: -1 };
+        break;
+      default:
+        filter = { category };
+        sort = { _id: -1 };
+        break;
+    }
+
+    const books = await Book.find(filter).sort(sort).skip(skip).limit(limit);
+    const totalItems = await Book.countDocuments(filter);
+    const totalPages = Math.ceil(totalItems / limit);
 
     if (!books.length) {
       return res.status(404).json({ message: `No books found for category: ${category}` });
     }
-
-    // Count total documents for pagination
-    const totalItems = await Book.countDocuments({ category: category });
-    const totalPages = Math.ceil(totalItems / limit);
 
     res.status(200).json({
       books,

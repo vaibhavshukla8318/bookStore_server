@@ -1,160 +1,14 @@
 [
   {
-    "category": [],
-    "_id": "6728ef7ac95d28a233c55cc3",
-    "title": "Physics",
-    "author": "HC Verma",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af2f73951593c916f3786",
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "image": "https://eloquentjavascript.net/img/cover.jpg",
     "pdf": [
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing",
-      "https://drive.google.com/file/d/1LmzPUo1wCU6Hznte56sEv1_LLIENh6Sb/view?usp=sharing"
-    ],
-    "likes": [
-      "6728bf3377f2c52c2700dd8c",
-      "6729a9ff5f20f00393115579"
-    ],
-    "dislikes": [],
-    "averageRating": 4,
-    "ratings": [
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "rating": 4,
-        "_id": "6728eff2c95d28a233c55d05"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "Hi there it's a great book you have",
-        "timestamp": "2024-11-04T16:00:59.101Z",
-        "replies": [
-          {
-            "userId": "6728bf3377f2c52c2700dd8c",
-            "content": "Thaku sir",
-            "timestamp": "2024-11-04T16:01:09.920Z",
-            "_id": "6728efc5c95d28a233c55cd9"
-          },
-          {
-            "userId": "6728bf3377f2c52c2700dd8c",
-            "content": "Welcome ",
-            "_id": "6729e0224e8d345e44bd3a3e",
-            "timestamp": "2024-11-05T09:06:42.766Z"
-          }
-        ],
-        "_id": "6728efbbc95d28a233c55ccf"
-      },
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "Great",
-        "_id": "6729940e28b488d78a1dd4c0",
-        "timestamp": "2024-11-05T03:42:06.249Z",
-        "replies": []
-      },
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "kldnaksdf",
-        "_id": "6729c2575499112d1674fe46",
-        "timestamp": "2024-11-05T06:59:35.301Z",
-        "replies": []
-      },
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "sdasdkflaskdf aldkflsd",
-        "_id": "6729c26e961480854aaac7e3",
-        "timestamp": "2024-11-05T06:59:58.482Z",
-        "replies": [
-          {
-            "userId": "6728bf3377f2c52c2700dd8c",
-            "content": "sdfkknsld",
-            "_id": "6729c279bd5ad79a57949f61",
-            "timestamp": "2024-11-05T07:00:09.154Z"
-          }
-        ]
-      },
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "ddf",
-        "_id": "6729c2c7e1d033d1a8c62757",
-        "timestamp": "2024-11-05T07:01:27.882Z",
-        "replies": []
-      },
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "hi there how are you",
-        "_id": "6729c2f454dbaa4ed406fd48",
-        "timestamp": "2024-11-05T07:02:12.073Z",
-        "replies": []
-      },
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "sdnaoisd",
-        "_id": "6729c38675a48267708653c1",
-        "timestamp": "2024-11-05T07:04:38.905Z",
-        "replies": []
-      },
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "sdnaoisd",
-        "_id": "6729c389bc63f9ae05513d18",
-        "timestamp": "2024-11-05T07:04:41.892Z",
-        "replies": []
-      },
-      {
-        "userId": "6729a9ff5f20f00393115579",
-        "content": "dsjfunasd",
-        "_id": "6729cecc81d3b0a6367970b6",
-        "timestamp": "2024-11-05T07:52:44.857Z",
-        "replies": [
-          {
-            "userId": "6729a9ff5f20f00393115579",
-            "content": "jddckjs sdjvnsdv sdvnsd",
-            "_id": "6729cf244bbb4485c48b9bf2",
-            "timestamp": "2024-11-05T07:54:12.283Z"
-          }
-        ]
-      }
-    ],
-    "__v": 16
-  },
-  {
-    "category": [],
-    "_id": "672a00baef567736e9c15d02",
-    "title": "JavaScripte",
-    "author": "David Flanagan",
-    "image": "https://example.com/images/javascript-guide.jpg",
-    "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
-    ],
-    "categories": [],
-    "likes": [],
-    "dislikes": [],
-    "averageRating": 0,
-    "ratings": [],
-    "comments": [],
-    "__v": 0
-  },
-  {
-    "_id": "672a00db196526cc8d7f6741",
-    "title": "react",
-    "author": "David Flanagan",
-    "image": "https://tse3.mm.bing.net/th?id=OIP.rO-GgQK-HFNNt3xMs7VkEwAAAA&pid=Api&P=0&h=180",
-    "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
+      "https://eloquentjavascript.net/"
     ],
     "category": [
-      "React"
+      "frontend"
     ],
     "likes": [],
     "dislikes": [],
@@ -164,12 +18,84 @@
     "__v": 0
   },
   {
-    "_id": "672a1148d48b30e89032bdd0",
-    "title": "backend",
-    "author": "David Flanagan",
-    "image": "https://tse1.mm.bing.net/th?id=OIP.IFS6BChELXFCVmG_TynJWwHaEO&pid=Api&P=0&h=180",
+    "_id": "672af33ffab9bee4f6e2a1cd",
+    "title": "You Don’t Know JS (YDKJS) Series",
+    "author": "Kyle Simpson",
+    "image": "https://github.com/getify/You-Dont-Know-JS/raw/2nd-ed/scope-closures/images/cover.png",
     "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
+      "https://github.com/getify/You-Dont-Know-JS"
+    ],
+    "category": [
+      "frontend"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672af36f782570cddb576370",
+    "title": "JavaScript for Cats",
+    "author": "Max Ogden",
+    "image": "http://jsforcats.com/images/substack-cats.png",
+    "pdf": [
+      "http://jsforcats.com/"
+    ],
+    "category": [
+      "frontend"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672af3a520a3ae66d5b7644e",
+    "title": "HTML5 Rocks",
+    "author": "Google Developers",
+    "image": "https://web.dev/static/images/home-blue_856.png",
+    "pdf": [
+      "http://www.html5rocks.com/"
+    ],
+    "category": [
+      "frontend"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672af3cedef739294d73d611",
+    "title": "Speaking JavaScript",
+    "author": "Axel Rauschmayer",
+    "image": "http://speakingjs.com/speakingjs_cover_large.jpg",
+    "pdf": [
+      "http://speakingjs.com/"
+    ],
+    "category": [
+      "frontend"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672af443fd2d059c991b21f5",
+    "title": " Node.js Succinctly",
+    "author": " Emanuele DelBono",
+    "image": "https://cdn.syncfusion.com/content/images/downloads/ebook/ebook-cover/NodeJs-Succinctly.jpg",
+    "pdf": [
+      "https://www.syncfusion.com/ebooks/nodejs_succinctly"
     ],
     "category": [
       "backend"
@@ -182,87 +108,15 @@
     "__v": 0
   },
   {
-    "_id": "672a11b947fb57acc60e2032",
-    "title": "frontend",
-    "author": "David Flanagan",
-    "image": "https://tse2.mm.bing.net/th?id=OIP.keu6UonKZhyvHS5smrNYSgHaEK&pid=Api&P=0&h=180",
+    "_id": "672af490d4b9bef8453e6225",
+    "title": "The Node Beginner Book",
+    "author": "Manuel Kiessling",
+    "image": "https://www.nodebeginner.org/the_node_beginner_book_cover_small.png",
     "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
+      "https://www.nodebeginner.org/"
     ],
     "category": [
-      "frontend"
-    ],
-    "likes": [
-      "6728bf3377f2c52c2700dd8c"
-    ],
-    "dislikes": [],
-    "averageRating": 0,
-    "ratings": [],
-    "comments": [],
-    "__v": 1
-  },
-  {
-    "_id": "672a12647d532ced2bd56121",
-    "title": "recent",
-    "author": "Flanagan",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
-    "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
-    ],
-    "category": [
-      "recent"
-    ],
-    "likes": [
-      "6728bf3377f2c52c2700dd8c"
-    ],
-    "dislikes": [],
-    "averageRating": 4,
-    "ratings": [
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "rating": 4,
-        "_id": "672a22cecd6f28bf67f80d39"
-      }
-    ],
-    "comments": [],
-    "__v": 2
-  },
-  {
-    "_id": "672a13d0f974c380ba216647",
-    "title": "recent 2",
-    "author": "Flanagan",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
-    "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
-    ],
-    "category": [
-      "recent"
-    ],
-    "likes": [
-      "6728bf3377f2c52c2700dd8c"
-    ],
-    "dislikes": [],
-    "averageRating": 4,
-    "ratings": [
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "rating": 4,
-        "_id": "672a181198802be60b40b307"
-      }
-    ],
-    "comments": [],
-    "__v": 4
-  },
-  {
-    "_id": "672a1970329ca4d68ea51e95",
-    "title": "recent 3",
-    "author": "Flanagan",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
-    "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
-    ],
-    "category": [
-      "recent"
+      "backend"
     ],
     "likes": [],
     "dislikes": [],
@@ -272,15 +126,15 @@
     "__v": 0
   },
   {
-    "_id": "672a197689420db8c55afe11",
-    "title": "recent 4",
-    "author": "Flanagan",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af5014335924c9369d3fd",
+    "title": " Express.js Guide",
+    "author": "Azat Mardan",
+    "image": "http://azat.wpenginepowered.com/wp-content/uploads/proexpress200.jpg",
     "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
+      "https://webapplog.com/express-js-guide/"
     ],
     "category": [
-      "recent"
+      "backend"
     ],
     "likes": [],
     "dislikes": [],
@@ -290,56 +144,15 @@
     "__v": 0
   },
   {
-    "_id": "672a197dbaf0567e612199d5",
-    "title": "recent 5",
-    "author": "Flanagan",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af54795ee1aa21059d5fd",
+    "title": "MongoDB University Courses",
+    "author": "MongoDB University",
+    "image": "https://webimages.mongodb.com/_com_assets/cms/kuyjf3vea2hg34taa-horizontal_default_slate_blue.svg?auto=format%252Ccompress",
     "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
+      "https://university.mongodb.com/"
     ],
     "category": [
-      "recent"
-    ],
-    "likes": [
-      "6728bf3377f2c52c2700dd8c"
-    ],
-    "dislikes": [],
-    "averageRating": 5,
-    "ratings": [
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "rating": 5,
-        "_id": "672a51a35f46f2c4a3550b7a"
-      }
-    ],
-    "comments": [
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "great book",
-        "_id": "672a239481cc4b9ffab7c3d8",
-        "timestamp": "2024-11-05T13:54:28.721Z",
-        "replies": [
-          {
-            "userId": "6728bf3377f2c52c2700dd8c",
-            "content": "thanks",
-            "_id": "672a23ae370c86628880fbda",
-            "timestamp": "2024-11-05T13:54:54.025Z"
-          }
-        ]
-      }
-    ],
-    "__v": 4
-  },
-  {
-    "_id": "672a19843efb6b335eab3242",
-    "title": "recent 6",
-    "author": "Flanagan",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
-    "pdf": [
-      "https://example.com/files/javascript-guide.pdf"
-    ],
-    "category": [
-      "recent"
+      "backend"
     ],
     "likes": [],
     "dislikes": [],
@@ -349,18 +162,15 @@
     "__v": 0
   },
   {
-    "_id": "672a198aa3183f5428f59974",
-    "title": "recent 7",
-    "author": "Flanagan",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af66037e5a863ab768f43",
+    "title": "Distributed Systems for Fun and Profit",
+    "author": "Mikito Takada",
+    "image": "https://scalegrid.io/wp-content/uploads/distributed-storage-system.jpg",
     "pdf": [
-      "https://example.com/files/javascript-guide.pdf",
-      "https://example.com/files/javascript-guide.pdf",
-      "https://example.com/files/javascript-guide.pdf",
-      "https://example.com/files/javascript-guide.pdf"
+      "http://book.mixu.net/distsys/"
     ],
     "category": [
-      "recent"
+      "backend"
     ],
     "likes": [],
     "dislikes": [],
@@ -370,15 +180,15 @@
     "__v": 0
   },
   {
-    "_id": "672a54ff66fe2f6dc6c0c7df",
-    "title": "hiiiii2",
-    "author": "dfnieofwoe",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af6de984a32ae4a5fca14",
+    "title": "Fullstack Open 2024 (React, Redux, Node.js, MongoDB, GraphQL)",
+    "author": "University of Helsinki",
+    "image": "https://repository-images.githubusercontent.com/720724014/a9e729f8-2a4e-4c35-a8ba-63511505647f",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://fullstackopen.com/en/"
     ],
     "category": [
-      "popular"
+      "react"
     ],
     "likes": [],
     "dislikes": [],
@@ -388,15 +198,15 @@
     "__v": 0
   },
   {
-    "_id": "672a5d561300e566450262b2",
-    "title": "difuvdif",
-    "author": "asdkjfsjfk",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af72996efa4c0b7cb7598",
+    "title": "React – A JavaScript Library for Building User Interfaces",
+    "author": "Facebook Open Source",
+    "image": "https://www.patterns.dev/img/reactjs/react-logo@3x.svg",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://reactjs.org/docs/getting-started.html"
     ],
     "category": [
-      "Physics"
+      "react"
     ],
     "likes": [],
     "dislikes": [],
@@ -406,15 +216,15 @@
     "__v": 0
   },
   {
-    "_id": "672a5dc17f9eea4ed19d39a2",
-    "title": "ziucvzisudv",
-    "author": "asdjf adf",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af781a50c0db31348fff5",
+    "title": "FreeCodeCamp’s Full Stack Web Development Guide",
+    "author": "FreeCodeCamp",
+    "image": "https://i.pcmag.com/imagery/reviews/01tPXClg2WjLamQzScplH3y-15.fit_scale.size_760x427.v1627670281.png",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://www.freecodecamp.org/learn/"
     ],
     "category": [
-      "Recent"
+      "react"
     ],
     "likes": [],
     "dislikes": [],
@@ -424,15 +234,15 @@
     "__v": 0
   },
   {
-    "_id": "672a5eb51a581c4f24335423",
-    "title": "lknlkdfa aewijf",
-    "author": "asdjfhsdf",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af7c12216c252448ac2c5",
+    "title": "The Road to React",
+    "author": " Robin Wieruch",
+    "image": "https://www.roadtoreact.com/static/84193e3d1b0b225941306d53bd24e4ba/0756a/cover.png",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://roadtoreact.com"
     ],
     "category": [
-      "crt"
+      "react"
     ],
     "likes": [],
     "dislikes": [],
@@ -442,15 +252,15 @@
     "__v": 0
   },
   {
-    "_id": "672a601587e1b83f579a2caa",
-    "title": "xkcvnsdfvsd",
-    "author": "adfvadsv",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672af8292cd0eb5bd74af32c",
+    "title": "Learning React",
+    "author": "Kirupa Chinnathambi",
+    "image": "https://i.ytimg.com/vi/nmlIjYLV-9Y/maxresdefault.jpg",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://www.kirupa.com/react/"
     ],
     "category": [
-      "recent"
+      "react"
     ],
     "likes": [],
     "dislikes": [],
@@ -460,15 +270,15 @@
     "__v": 0
   },
   {
-    "_id": "672a603c6ec855b7ccd02b2b",
-    "title": "iofbj sodf jp",
-    "author": "dfsdfbsdfb",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672afb80c7f4a0fa5070621c",
+    "title": "Problem Solving with Algorithms and Data Structures using Python",
+    "author": "Brad Miller and David Ranum",
+    "image": "https://runestone.academy/ns/books/published/pythonds/_images/PythonDScover.jpg",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://runestone.academy/runestone/books/published/pythonds/index.html"
     ],
     "category": [
-      "jfhjdfh"
+      "dsa"
     ],
     "likes": [],
     "dislikes": [],
@@ -478,15 +288,15 @@
     "__v": 0
   },
   {
-    "_id": "672a6086279bae560a1cde6e",
-    "title": "ifoid o sadjf ",
-    "author": "dkfbsldkf df",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672afbf0d2a096a6aeb679fe",
+    "title": "Data Structures and Algorithms with JavaScript",
+    "author": "Michael McMillan",
+    "image": "https://m.media-amazon.com/images/I/91hWvC6zGSL._UF1000,1000_QL80_.jpg",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://github.com/nzakas/computer-science-in-javascript"
     ],
     "category": [
-      "Technology"
+      "dsa"
     ],
     "likes": [],
     "dislikes": [],
@@ -496,15 +306,15 @@
     "__v": 0
   },
   {
-    "_id": "672a618b4801f2cb5eef844d",
-    "title": "dlfkgnldfg",
-    "author": "dfgdf",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672afc3976e4f114ef32c206",
+    "title": "Open Data Structures (in multiple programming languages)",
+    "author": "Pat Morin",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5uoiIg5k75No2yN6IeX1rsazcMxE33psong&s",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://opendatastructures.org/"
     ],
     "category": [
-      "highlyRated"
+      "dsa"
     ],
     "likes": [],
     "dislikes": [],
@@ -514,15 +324,15 @@
     "__v": 0
   },
   {
-    "_id": "672a69d4b1dd3a41b5b48725",
-    "title": "hi there hoe",
-    "author": "weorl eir",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672afc6b813b5c91a85e910a",
+    "title": " Competitive Programmer’s Handbook",
+    "author": "Antti Laaksonen",
+    "image": "https://cses.fi/book/gtcp.jpg",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://cses.fi/book/"
     ],
     "category": [
-      "recent"
+      "dsa"
     ],
     "likes": [],
     "dislikes": [],
@@ -532,15 +342,15 @@
     "__v": 0
   },
   {
-    "_id": "672a6a010423c8b93d1f7c80",
-    "title": "retert",
-    "author": "ertwer",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672afc99548e26332c5d1c32",
+    "title": "Algorithms, 4th Edition (Online Java content)",
+    "author": "Robert Sedgewick and Kevin Wayne",
+    "image": "https://algs4.cs.princeton.edu/cover.png",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://algs4.cs.princeton.edu/home/"
     ],
     "category": [
-      "ergher"
+      "dsa"
     ],
     "likes": [],
     "dislikes": [],
@@ -550,15 +360,98 @@
     "__v": 0
   },
   {
-    "_id": "672a6a502de01d56a3e09b01",
-    "title": "High",
-    "author": "rated",
-    "image": "https://images.unsplash.com/photo-1507842217343-583bb7270b66",
+    "_id": "672afcd31ee4523edf97446a",
+    "title": "The Pragmatic Programmer (Excerpts and references)",
+    "author": "Andrew Hunt and David Thomas",
+    "image": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/tpp20_hu7d9a813cf46675dfb7b1bf4930cee733_2802494_375x0_resize_q75_box.jpg",
     "pdf": [
-      "https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+      "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/"
     ],
     "category": [
-      "highRated"
+      "software"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672afd07927e7ddf4cdd9ca0",
+    "title": "Clean Code (Sample chapters and resources)",
+    "author": "Robert C. Martin",
+    "image": "https://learning.oreilly.com/library/cover/9780136083238/250w/",
+    "pdf": [
+      "https://www.oreilly.com/library/view/clean-code/9780136083238/"
+    ],
+    "category": [
+      "software"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672afd4d869ef8c253940d2b",
+    "title": "Refactoring (Sample code and resources)",
+    "author": "Martin Fowler",
+    "image": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200922214602/7-Code-Refactoring-Techniques-in-Software-Engineering.png",
+    "pdf": [
+      "https://refactoring.com/"
+    ],
+    "category": [
+      "software"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672afd84f4d213f2b906a0a3",
+    "title": "The Cathedral and the Bazaar (Open-source philosophy)",
+    "author": " Eric S. Raymond",
+    "image": "http://www.catb.org/~esr/graphics/cb.s.png",
+    "pdf": [
+      "http://www.catb.org/~esr/writings/cathedral-bazaar/"
+    ],
+    "category": [
+      "software"
+    ],
+    "likes": [],
+    "dislikes": [],
+    "averageRating": 0,
+    "ratings": [],
+    "comments": [],
+    "__v": 0
+  },
+  {
+    "_id": "672afda92534bc8d95a3228f",
+    "title": " Producing Open Source Software",
+    "author": "Karl Fogel",
+    "image": "https://producingoss.com/images/producingoss-cover-small.gif",
+    "pdf": [
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/",
+      "https://producingoss.com/"
+    ],
+    "category": [
+      "software"
     ],
     "likes": [],
     "dislikes": [],
