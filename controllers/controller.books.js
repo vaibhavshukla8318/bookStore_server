@@ -357,26 +357,56 @@ const rateBook = async (req, res) => {
 
 
 // Add a comment to a book
+// const addComment = async (req, res) => {
+//   try {
+//     const { bookId } = req.params;
+//     const { content } = req.body;
+//     const userId = req.user._id;
+
+//     if (!content || content.trim() === '') {
+//       return res.status(400).json({ message: 'Comment content cannot be empty' });
+//     }
+
+//     const book = await Book.findById(bookId);
+
+//     if (!book) {
+//       return res.status(404).json({ message: 'Book not found' });
+//     }
+
+//     const comment = { userId, content };
+//     book.comments.push(comment);
+
+//     await book.save();
+//     await updateDataFile();
+
+//     res.status(201).json({ message: 'Comment added', comments: book.comments });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// };
+
+
+
+
 const addComment = async (req, res) => {
   try {
     const { bookId } = req.params;
     const { content } = req.body;
     const userId = req.user._id;
-    // const email = req.user.email;
 
     if (!content || content.trim() === '') {
       return res.status(400).json({ message: 'Comment content cannot be empty' });
     }
 
     const book = await Book.findById(bookId);
-
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
     }
 
-    const comment = { userId, content };
-    book.comments.push(comment);
+    const user = await User.findById(userId);
+    const comment = { userId, content, email: user.email };
 
+    book.comments.push(comment);
     await book.save();
     await updateDataFile();
 
@@ -386,7 +416,45 @@ const addComment = async (req, res) => {
   }
 };
 
+
 // Add a reply to a comment
+// const addReply = async (req, res) => {
+//   try {
+//     const { bookId, commentId } = req.params;
+//     const { content } = req.body;
+//     const userId = req.user._id;
+
+//     if (!content || content.trim() === '') {
+//       return res.status(400).json({ message: 'Reply content cannot be empty' });
+//     }
+
+//     const book = await Book.findById(bookId);
+
+//     if (!book) {
+//       return res.status(404).json({ message: 'Book not found' });
+//     }
+
+//     const comment = book.comments.id(commentId);
+//     if (!comment) {
+//       return res.status(404).json({ message: 'Comment not found' });
+//     }
+
+//     const reply = { userId, content };
+//     comment.replies.push(reply);
+
+//     await book.save();
+//     await updateDataFile();
+
+//     res.status(201).json({ message: 'Reply added', replies: comment.replies });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// };
+
+
+
+
+
 const addReply = async (req, res) => {
   try {
     const { bookId, commentId } = req.params;
@@ -398,7 +466,6 @@ const addReply = async (req, res) => {
     }
 
     const book = await Book.findById(bookId);
-
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
     }
@@ -408,9 +475,10 @@ const addReply = async (req, res) => {
       return res.status(404).json({ message: 'Comment not found' });
     }
 
-    const reply = { userId, content };
-    comment.replies.push(reply);
+    const user = await User.findById(userId);
+    const reply = { userId, content, email: user.email };
 
+    comment.replies.push(reply);
     await book.save();
     await updateDataFile();
 
@@ -420,12 +488,32 @@ const addReply = async (req, res) => {
   }
 };
 
+
 // Get all comments and replies for a book
+// const getComments = async (req, res) => {
+//   try {
+//     const { bookId } = req.params;
+
+//     const book = await Book.findById(bookId).populate('comments.userId', 'username email').populate('comments.replies.userId', 'username email');
+
+//     if (!book) {
+//       return res.status(404).json({ message: 'Book not found' });
+//     }
+
+//     res.status(200).json({ comments: book.comments });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// };
+
+
 const getComments = async (req, res) => {
   try {
     const { bookId } = req.params;
 
-    const book = await Book.findById(bookId).populate('comments.userId', 'username email').populate('comments.replies.userId', 'username email');
+    const book = await Book.findById(bookId)
+      .populate('comments.userId', 'username email')
+      .populate('comments.replies.userId', 'username email');
 
     if (!book) {
       return res.status(404).json({ message: 'Book not found' });
@@ -436,6 +524,7 @@ const getComments = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 
 

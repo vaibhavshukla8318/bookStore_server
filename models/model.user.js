@@ -23,7 +23,8 @@ const userSchema = new mongoose.Schema({
   isLogin: {
     type: Boolean,
     default: false
-  }
+  },
+
 })
 
 // Securing or hashing Password

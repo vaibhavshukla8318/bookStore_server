@@ -39,7 +39,7 @@
     "_id": "672af36f782570cddb576370",
     "title": "JavaScript for Cats",
     "author": "Max Ogden",
-    "image": "http://jsforcats.com/images/substack-cats.png",
+    "image": "https://www.roadtoreact.com/static/84193e3d1b0b225941306d53bd24e4ba/0756a/cover.png",
     "pdf": [
       "http://jsforcats.com/"
     ],
@@ -75,7 +75,7 @@
     "_id": "672af3cedef739294d73d611",
     "title": "Speaking JavaScript",
     "author": "Axel Rauschmayer",
-    "image": "http://speakingjs.com/speakingjs_cover_large.jpg",
+    "image": "https://www.roadtoreact.com/static/84193e3d1b0b225941306d53bd24e4ba/0756a/cover.png",
     "pdf": [
       "http://speakingjs.com/"
     ],
@@ -226,12 +226,14 @@
     "category": [
       "react"
     ],
-    "likes": [],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
     "dislikes": [],
     "averageRating": 0,
     "ratings": [],
     "comments": [],
-    "__v": 0
+    "__v": 1
   },
   {
     "_id": "672af7c12216c252448ac2c5",
@@ -244,12 +246,20 @@
     "category": [
       "react"
     ],
-    "likes": [],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
     "dislikes": [],
-    "averageRating": 0,
-    "ratings": [],
+    "averageRating": 5,
+    "ratings": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "rating": 5,
+        "_id": "672cc7d67e08856ed9ee4e80"
+      }
+    ],
     "comments": [],
-    "__v": 0
+    "__v": 2
   },
   {
     "_id": "672af8292cd0eb5bd74af32c",
@@ -370,12 +380,14 @@
     "category": [
       "software"
     ],
-    "likes": [],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
     "dislikes": [],
     "averageRating": 0,
     "ratings": [],
     "comments": [],
-    "__v": 0
+    "__v": 1
   },
   {
     "_id": "672afd07927e7ddf4cdd9ca0",
@@ -388,12 +400,53 @@
     "category": [
       "software"
     ],
-    "likes": [],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
     "dislikes": [],
-    "averageRating": 0,
-    "ratings": [],
-    "comments": [],
-    "__v": 0
+    "averageRating": 4,
+    "ratings": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "rating": 4,
+        "_id": "67374365eca8d909b8b07cc0"
+      }
+    ],
+    "comments": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "email": "aka@gmail.com",
+        "content": "its a great book",
+        "_id": "67374329bb38e4def84c5df5",
+        "timestamp": "2024-11-15T12:48:41.976Z",
+        "replies": [
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "email": "aka@gmail.com",
+            "content": "werewrt",
+            "_id": "673743570ed211dbcfbbc280",
+            "timestamp": "2024-11-15T12:49:27.396Z"
+          }
+        ]
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "email": "aka@gmail.com",
+        "content": "hello",
+        "_id": "6737433ade4c003ff5f95611",
+        "timestamp": "2024-11-15T12:48:58.820Z",
+        "replies": []
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "email": "aka@gmail.com",
+        "content": "erwer",
+        "_id": "6737434929877114155fae6b",
+        "timestamp": "2024-11-15T12:49:13.317Z",
+        "replies": []
+      }
+    ],
+    "__v": 6
   },
   {
     "_id": "672afd4d869ef8c253940d2b",
@@ -417,19 +470,99 @@
     "_id": "672afd84f4d213f2b906a0a3",
     "title": "The Cathedral and the Bazaar (Open-source philosophy)",
     "author": " Eric S. Raymond",
-    "image": "http://www.catb.org/~esr/graphics/cb.s.png",
+    "image": "https://www.roadtoreact.com/static/84193e3d1b0b225941306d53bd24e4ba/0756a/cover.png",
     "pdf": [
+      "http://www.catb.org/~esr/writings/cathedral-bazaar/",
+      "http://www.catb.org/~esr/writings/cathedral-bazaar/",
+      "http://www.catb.org/~esr/writings/cathedral-bazaar/",
       "http://www.catb.org/~esr/writings/cathedral-bazaar/"
     ],
     "category": [
       "software"
     ],
-    "likes": [],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
     "dislikes": [],
-    "averageRating": 0,
-    "ratings": [],
-    "comments": [],
-    "__v": 0
+    "averageRating": 4,
+    "ratings": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "rating": 4,
+        "_id": "6737414279be7165c813365f"
+      }
+    ],
+    "comments": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "email": "aka@gmail.com",
+        "content": "hi",
+        "_id": "6735984b90d179e27415a6bc",
+        "timestamp": "2024-11-14T06:27:23.590Z",
+        "replies": [
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "email": "aka@gmail.com",
+            "content": "hello there",
+            "_id": "6735989d17f47e9f29fbd090",
+            "timestamp": "2024-11-14T06:28:45.360Z"
+          },
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "email": "aka@gmail.com",
+            "content": "eirgworihgwierg",
+            "_id": "67373938fc1f5622a58e6be4",
+            "timestamp": "2024-11-15T12:06:16.781Z"
+          }
+        ]
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "email": "aka@gmail.com",
+        "content": "bkmfglk",
+        "_id": "67373859330cc562601d9fa2",
+        "timestamp": "2024-11-15T12:02:33.112Z",
+        "replies": []
+      },
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "email": "aka@gmail.com",
+        "content": "hi there my name is vaibhav shukla",
+        "_id": "6737395165cd11039a0bad8d",
+        "timestamp": "2024-11-15T12:06:41.815Z",
+        "replies": [
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "email": "aka@gmail.com",
+            "content": "hello sir i hope you are fine",
+            "_id": "67373a8ecab7af0ec9293311",
+            "timestamp": "2024-11-15T12:11:58.328Z"
+          },
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "email": "aka@gmail.com",
+            "content": "hello there",
+            "_id": "67373b7968dc4d887eff6b61",
+            "timestamp": "2024-11-15T12:15:53.295Z"
+          },
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "email": "aka@gmail.com",
+            "content": "helllo",
+            "_id": "67373bbc896886feeb5e1d8c",
+            "timestamp": "2024-11-15T12:17:00.601Z"
+          },
+          {
+            "userId": "6729a9ff5f20f00393115579",
+            "email": "vai@gmail.com",
+            "content": "hello sab log, kaise ho",
+            "_id": "6737410514254df271f0d674",
+            "timestamp": "2024-11-15T12:39:33.938Z"
+          }
+        ]
+      }
+    ],
+    "__v": 11
   },
   {
     "_id": "672afda92534bc8d95a3228f",
@@ -453,11 +586,21 @@
     "category": [
       "software"
     ],
-    "likes": [],
+    "likes": [
+      "6728bf3377f2c52c2700dd8c"
+    ],
     "dislikes": [],
     "averageRating": 0,
     "ratings": [],
-    "comments": [],
-    "__v": 0
+    "comments": [
+      {
+        "userId": "6728bf3377f2c52c2700dd8c",
+        "content": "Hi",
+        "_id": "672b06e5c114dbc1900d73c8",
+        "timestamp": "2024-11-06T06:04:21.710Z",
+        "replies": []
+      }
+    ],
+    "__v": 2
   }
 ]

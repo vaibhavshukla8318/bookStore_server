@@ -7,7 +7,6 @@ const isValidImageUrl = (url) => {
 };
 
 const booksSchema = new Schema({
- 
   title: {
     type: String,
     required: true,
@@ -55,6 +54,10 @@ const booksSchema = new Schema({
       ref: 'User',
       required: true
     },
+    email: {  // Added email field
+      type: String,
+      required: true
+    },
     content: {
       type: String,
       required: true
@@ -67,6 +70,10 @@ const booksSchema = new Schema({
       userId: {
         type: Schema.Types.ObjectId,
         ref: 'User',
+        required: true
+      },
+      email: {  // Added email field for replies
+        type: String,
         required: true
       },
       content: {
@@ -82,5 +89,4 @@ const booksSchema = new Schema({
 });
 
 const Books = model('Books', booksSchema);
-
 module.exports = Books;
