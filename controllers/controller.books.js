@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const Book = require('../models/models.books');
 const User = require('../models/model.user');
+const { isAborted } = require('zod');
 
 const dataFilePath = path.join(__dirname, '../data.json');
 
@@ -488,25 +489,7 @@ const addReply = async (req, res) => {
   }
 };
 
-
-// Get all comments and replies for a book
-// const getComments = async (req, res) => {
-//   try {
-//     const { bookId } = req.params;
-
-//     const book = await Book.findById(bookId).populate('comments.userId', 'username email').populate('comments.replies.userId', 'username email');
-
-//     if (!book) {
-//       return res.status(404).json({ message: 'Book not found' });
-//     }
-
-//     res.status(200).json({ comments: book.comments });
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// };
-
-
+// get all comments
 const getComments = async (req, res) => {
   try {
     const { bookId } = req.params;

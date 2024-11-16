@@ -15,7 +15,10 @@ const getAllUsers = async (req, res) =>{
      if(!user || user.length === 0){
       return res.status(404).json({message: "No user found"});
      }
-     res.status(200).json(user);
+      // Sort users: Admins first
+    const sortedUsers = user.sort((a, b) => b.isAdmin - a.isAdmin);
+
+    res.status(200).json(sortedUsers);
   } catch (error) {
     next(error);
   }

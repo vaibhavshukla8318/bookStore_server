@@ -16,8 +16,8 @@ const errorMiddleware = require("./middlewares/middleware.error");
 // cors
 
 const corsOptions = {
-  origin: 'https://bookstore8318.netlify.app',
-  // origin: 'http://localhost:5173',
+  // origin: 'https://bookstore8318.netlify.app',
+  origin: 'http://localhost:5173',
   credentials: true,
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD']

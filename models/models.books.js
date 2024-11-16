@@ -54,7 +54,7 @@ const booksSchema = new Schema({
       ref: 'User',
       required: true
     },
-    email: {  // Added email field
+    email: { 
       type: String,
       required: true
     },
@@ -72,7 +72,7 @@ const booksSchema = new Schema({
         ref: 'User',
         required: true
       },
-      email: {  // Added email field for replies
+      email: {
         type: String,
         required: true
       },
