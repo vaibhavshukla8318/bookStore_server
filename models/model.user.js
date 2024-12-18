@@ -30,9 +30,17 @@ const userSchema = new mongoose.Schema({
 // Securing or hashing Password
 userSchema.pre("save", async function(next){
    const user = this;
+
+    // Check if the email matches the default admin email
+  const defaultAdminEmail = process.env.DEFAULT_ADMIN_EMAIL;
+  if (user.email === defaultAdminEmail) {
+    user.isAdmin = true;
+  }
+  
    if(!user.isModified('password')){
      next();
    }
+  
    try {
     const saltRound = 10
     const hashedPassword = await bcrypt.hash(user.password, saltRound);

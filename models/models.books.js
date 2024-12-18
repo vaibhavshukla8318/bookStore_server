@@ -18,7 +18,6 @@ const booksSchema = new Schema({
   image: {
     type: String,
     required: true,
-    validate: [isValidImageUrl, 'Invalid image URL'],
   },
   pdf: {
     type: Array,

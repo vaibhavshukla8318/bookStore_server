@@ -2,6 +2,7 @@ require("dotenv").config();
 const cors = require('cors');
 const express = require('express')
 const app = express()
+const path = require('path');
 const authRouter = require("./router/router.auth")
 const formRouter = require("./router/router.contact");
 const serviceRouter = require("./router/router.service");
@@ -27,6 +28,7 @@ app.use(cors(corsOptions));
 
 // middleware
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use("/api/auth", authRouter);
 app.use("/api/form", formRouter);
@@ -46,7 +48,7 @@ app.get('/', (req, res) => {
 app.use(errorMiddleware)
 
 
-const PORT = 3000 || PORT;
+const PORT = 8080 || PORT;
 
 // server
 connectDB().then(()=>{

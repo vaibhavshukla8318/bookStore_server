@@ -481,15 +481,22 @@
       "software"
     ],
     "likes": [
-      "6728bf3377f2c52c2700dd8c"
+      "6728bf3377f2c52c2700dd8c",
+      "6738899ae309d6bcfbfcaafb",
+      "6744aaec6081674145c6164c"
     ],
     "dislikes": [],
-    "averageRating": 4,
+    "averageRating": 3.5,
     "ratings": [
       {
         "userId": "6728bf3377f2c52c2700dd8c",
         "rating": 4,
         "_id": "6737414279be7165c813365f"
+      },
+      {
+        "userId": "6738899ae309d6bcfbfcaafb",
+        "rating": 3,
+        "_id": "6742e771bb4bf3e511737e92"
       }
     ],
     "comments": [
@@ -607,7 +614,15 @@
         "content": "hi there how are you",
         "_id": "67384f03ed58929f5d3619bc",
         "timestamp": "2024-11-16T07:51:31.167Z",
-        "replies": []
+        "replies": [
+          {
+            "userId": "6728bf3377f2c52c2700dd8c",
+            "email": "aka@gmail.com",
+            "content": "Hello sir I hope you are doing great👍",
+            "_id": "673c3f6fa71744fb54f2b55f",
+            "timestamp": "2024-11-19T07:34:07.644Z"
+          }
+        ]
       },
       {
         "userId": "6729a9ff5f20f00393115579",
@@ -698,45 +713,6 @@
         "replies": []
       }
     ],
-    "__v": 28
-  },
-  {
-    "_id": "672afda92534bc8d95a3228f",
-    "title": " Producing Open Source Software",
-    "author": "Karl Fogel",
-    "image": "https://producingoss.com/images/producingoss-cover-small.gif",
-    "pdf": [
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/",
-      "https://producingoss.com/"
-    ],
-    "category": [
-      "software"
-    ],
-    "likes": [
-      "6728bf3377f2c52c2700dd8c"
-    ],
-    "dislikes": [],
-    "averageRating": 0,
-    "ratings": [],
-    "comments": [
-      {
-        "userId": "6728bf3377f2c52c2700dd8c",
-        "content": "Hi",
-        "_id": "672b06e5c114dbc1900d73c8",
-        "timestamp": "2024-11-06T06:04:21.710Z",
-        "replies": []
-      }
-    ],
-    "__v": 2
+    "__v": 46
   }
 ]

@@ -4,9 +4,23 @@ const fs = require('fs');
 const path = require('path');
 const Book = require('../models/models.books');
 const User = require('../models/model.user');
+const multer = require('multer');
 const { isAborted } = require('zod');
 
 const dataFilePath = path.join(__dirname, '../data.json');
+
+// Configure Multer for file uploads
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, './uploads'); // Directory to store files
+  },
+ // multer filename function
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname}`);
+}
+
+});
+const upload = multer({ storage });
 
 
 // Function to update data.json
@@ -34,8 +48,6 @@ const getAllBooks = async (req, res) => {
     console.error(error);
   }
 }
-
-
 
 const getBooksByCategory = async (req, res) => {
   try {
@@ -117,11 +129,6 @@ const getBooksByCategoryPagination = async (req, res) => {
 };
 
 
-
-
-
-
-
 // books using query(limit, page)
 const books = async (req, res) => {
   try {
@@ -198,23 +205,25 @@ const updateBookById = async (req, res) =>{
 }
 
 
-
-// add books
 const addBooks = async (req, res) => {
   try {
-    const { title, author, image, pdf, category } = req.body;
+    const { title, author, pdf, category } = req.body;
+    let { image } = req.body;
     const titleExist = await Book.findOne({ title });
 
     if (titleExist) {
       return res.status(400).json({ msg: "This book already exists with this title" });
     }
 
-    // Add the new book to the database
-    const addBook = await Book.create({
-       title, author, image, pdf, category
-      });
+    // Handle image upload
+    if (req.file) {
+      image = `/uploads/${req.file.filename}`;
+    }
 
-   
+    const addBook = await Book.create({
+      title, author, image, pdf, category
+    });
+
     await updateDataFile();
 
     res.status(200).json({ msg: "Your new book has been added successfully", addBook });
@@ -225,28 +234,41 @@ const addBooks = async (req, res) => {
 };
 
 
-// delete books by id
 const deleteBook = async (req, res) => {
   try {
     const id = req.params.id;
 
-    // Delete book from MongoDB
+    // Find the book to retrieve the image path
     const book = await Book.findByIdAndDelete(id);
+
     if (!book) {
       return res.status(404).json({ message: "No book found with this ID" });
     }
 
-    await updateDataFile(); 
+    // Check if the book has an image associated
+    if (book.image) {
+      const imagePath = path.join(__dirname, '..', book.image);
+
+      // Delete the image file from the filesystem
+      fs.unlink(imagePath, (err) => {
+        if (err) {
+          console.error(`Error deleting image file: ${err.message}`);
+          // Optionally, log or handle this case
+        } else {
+          console.log(`Image file ${imagePath} deleted successfully.`);
+        }
+      });
+    }
+
+    // Update the data.json file
+    await updateDataFile();
 
     res.status(200).json({ message: "Book deleted successfully" });
   } catch (error) {
-    console.log("Error in deleting a book", error.message);
+    console.error("Error in deleting a book:", error.message);
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
-
-
-
 
 
 // Like a book
@@ -311,9 +333,6 @@ const dislikeBook = async (req, res) => {
   }
 };
 
-
-
-
 // Rate a book
 const rateBook = async (req, res) => {
   try {
@@ -355,40 +374,6 @@ const rateBook = async (req, res) => {
 };
 
 
-
-
-// Add a comment to a book
-// const addComment = async (req, res) => {
-//   try {
-//     const { bookId } = req.params;
-//     const { content } = req.body;
-//     const userId = req.user._id;
-
-//     if (!content || content.trim() === '') {
-//       return res.status(400).json({ message: 'Comment content cannot be empty' });
-//     }
-
-//     const book = await Book.findById(bookId);
-
-//     if (!book) {
-//       return res.status(404).json({ message: 'Book not found' });
-//     }
-
-//     const comment = { userId, content };
-//     book.comments.push(comment);
-
-//     await book.save();
-//     await updateDataFile();
-
-//     res.status(201).json({ message: 'Comment added', comments: book.comments });
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// };
-
-
-
-
 const addComment = async (req, res) => {
   try {
     const { bookId } = req.params;
@@ -416,44 +401,6 @@ const addComment = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
-
-// Add a reply to a comment
-// const addReply = async (req, res) => {
-//   try {
-//     const { bookId, commentId } = req.params;
-//     const { content } = req.body;
-//     const userId = req.user._id;
-
-//     if (!content || content.trim() === '') {
-//       return res.status(400).json({ message: 'Reply content cannot be empty' });
-//     }
-
-//     const book = await Book.findById(bookId);
-
-//     if (!book) {
-//       return res.status(404).json({ message: 'Book not found' });
-//     }
-
-//     const comment = book.comments.id(commentId);
-//     if (!comment) {
-//       return res.status(404).json({ message: 'Comment not found' });
-//     }
-
-//     const reply = { userId, content };
-//     comment.replies.push(reply);
-
-//     await book.save();
-//     await updateDataFile();
-
-//     res.status(201).json({ message: 'Reply added', replies: comment.replies });
-//   } catch (error) {
-//     res.status(500).json({ error: error.message });
-//   }
-// };
-
-
-
 
 
 const addReply = async (req, res) => {
@@ -511,4 +458,4 @@ const getComments = async (req, res) => {
 
 
 
-module.exports = {getAllBooks, books, addBooks, getBooksById, updateBookById, deleteBook, likeBook, dislikeBook, rateBook, addComment, getComments, addReply, getBooksByCategory, getBooksByCategoryPagination};
+module.exports = {upload, getAllBooks, books, addBooks, getBooksById, updateBookById, deleteBook, likeBook, dislikeBook, rateBook, addComment, getComments, addReply, getBooksByCategory, getBooksByCategoryPagination};
